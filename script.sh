@@ -22,9 +22,9 @@ gcloud ai models upload --region=$REGION \
             --container-env-vars=DEVICE=cpu,TOPK=1    
           
 
-# gcloud ai endpoints create --region=$REGION \
-#              --display-name=$ENDPOINT_NAME \
-#              --endpoint-id=$ENDPOINT_ID
+ gcloud ai endpoints create --region=$REGION \
+              --display-name=$ENDPOINT_NAME \
+              --endpoint-id=$ENDPOINT_ID
              
  #gcloud ai endpoints delete $ENDPOINT_ID --region=$REGION -q
 
