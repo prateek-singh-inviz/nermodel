@@ -1,7 +1,7 @@
 touch temp.json
 echo $gcp_credential > temp.json
 sudo snap install google-cloud-cli --classic
-export SERVICE_ACCOUNT='prateek19.com@gmail.com'
+export SERVICE_ACCOUNT='ner-275@onyx-principle-364411.iam.gserviceaccount.com'
 export REGION='asia-south1'
 export ENDPOINT_NAME='ner-testing-v01'
 export MODEL_NAME1='ner-v01-m01'
