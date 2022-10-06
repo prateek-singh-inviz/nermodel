@@ -1,0 +1,25 @@
+name: Vertex Ai  Automation
+#
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+jobs:
+  automate-deployment-on-Vertex-AI :
+    runs-on : ubuntu-latest
+    env:
+      gcp_credential: ${{secrets.GCP_CRED}}
+    steps :
+      - uses: actions/checkout@v2
+      - name: test
+        run: |
+          chmod +x ./script.sh
+          bash ./script.sh
