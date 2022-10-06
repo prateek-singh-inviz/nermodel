@@ -1,16 +1,16 @@
 touch temp.json
 echo $gcp_credential > temp.json
 sudo snap install google-cloud-cli --classic
-export SERVICE_ACCOUNT='naveen-mid-access@inviz-gcp.iam.gserviceaccount.com'
+export SERVICE_ACCOUNT='prateek19.com@gmail.com'
 export REGION='asia-south1'
-export ENDPOINT_NAME='spellcheck-vertex-ai-ep-mr-2'
-export MODEL_NAME1='spellcheck-model-demo-v32'
-export MODEL1_ID='spellcheck-model-id-finalbf2'
+export ENDPOINT_NAME='ner-testing-v01'
+export MODEL_NAME1='ner-v01-m01'
+export MODEL1_ID='new-testing'
 # export MODEL_NAME2='Model_3'
 # export MODEL2_ID='MY_Model_03'
-export ENDPOINT_ID='11903123'
-export CONTAINER_IMAGE='gcr.io/inviz-gcp/spellcheck-vi-automation:latest'
-export PROJECT='inviz-gcp'
+export ENDPOINT_ID='7879654'
+export CONTAINER_IMAGE='gcr.io/onyx-principle-364411/nermodel@sha256:0bc7b2a364ebbe91e01b46bf0e4f7ff11db2e25d1d4b30c89c1bae3d92d62168'
+export PROJECT='onyx-principle-364411'
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
 
 gcloud ai models upload --region=$REGION \
