@@ -17,7 +17,7 @@ gcloud ai models upload --region=$REGION \
             --display-name=$MODEL_NAME1 \
             --container-image-uri=$CONTAINER_IMAGE \
             --model-id=$MODEL1_ID \
-            --container-predict-route=/predict/src/main/job/ner_train_model \
+            --container-predict-route=/predict \
             --container-health-route=/live \
             --container-env-vars=DEVICE=cpu,TOPK=1    
           
