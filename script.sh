@@ -18,7 +18,7 @@ gcloud ai models upload --region=$REGION \
             --container-image-uri=$CONTAINER_IMAGE \
             --model-id=$MODEL1_ID \
             --container-predict-route=/predict \
-            --container-health-route=/live \
+#            --container-health-route=/live \
             --container-env-vars=DEVICE=cpu,TOPK=1    
           
 
