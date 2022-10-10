@@ -3,12 +3,12 @@ echo $gcp_credential > temp.json
 sudo snap install google-cloud-cli --classic
 export SERVICE_ACCOUNT='ner-275@onyx-principle-364411.iam.gserviceaccount.com'
 export REGION='us-central1'
-export ENDPOINT_NAME='ner-testing-v05'
-export MODEL_NAME1='ner-v01-m05'
-export MODEL1_ID='new-testing-05'
+export ENDPOINT_NAME='ner-testing-v06'
+export MODEL_NAME1='ner-v01-m06'
+export MODEL1_ID='new-testing-06'
 # export MODEL_NAME2='Model_3'
 # export MODEL2_ID='MY_Model_03'
-export ENDPOINT_ID='11908240'
+export ENDPOINT_ID='11908241'
 export CONTAINER_IMAGE='gcr.io/onyx-principle-364411/ner-model-inference:v1'
 export PROJECT='onyx-principle-364411'
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
@@ -16,10 +16,10 @@ gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --pro
 gcloud ai models upload --region=$REGION \
             --display-name=$MODEL_NAME1 \
             --container-image-uri=$CONTAINER_IMAGE \
-            --model-id=$MODEL1_ID 
+            --model-id=$MODEL1_ID \
             --container-predict-route=/predict \
-#             --container-health-route=/live \
-#             --container-env-vars=DEVICE=cpu,TOPK=1    
+            --container-health-route=/live \
+            --container-env-vars=DEVICE=gpu,TOPK=1    
           
 
 gcloud ai endpoints create --region=$REGION \
