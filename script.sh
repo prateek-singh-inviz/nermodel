@@ -8,7 +8,7 @@ export MODEL_NAME1='ner-v01-m1'
 export MODEL1_ID='new-testing-1'
 # export MODEL_NAME2='Model_3'
 # export MODEL2_ID='MY_Model_03'
-export ENDPOINT_ID='11908241'
+export ENDPOINT_ID='11908231'
 export CONTAINER_IMAGE='gcr.io/onyx-principle-364411/ner-model-inference:v1'
 export PROJECT='onyx-principle-364411'
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
