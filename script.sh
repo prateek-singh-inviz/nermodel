@@ -3,13 +3,13 @@ echo $gcp_credential > temp.json
 sudo snap install google-cloud-cli --classic
 export SERVICE_ACCOUNT='ner-275@onyx-principle-364411.iam.gserviceaccount.com'
 export REGION='us-central1'
-export ENDPOINT_NAME='ner-testing-v3'
-export MODEL_NAME1='ner-v01-m3'
-export MODEL1_ID='new-testing-3'
+export ENDPOINT_NAME='ner-testing-v4'
+export MODEL_NAME1='ner-v01-m4'
+export MODEL1_ID='new-testing-4'
 # export MODEL_NAME2='Model_3'
 # export MODEL2_ID='MY_Model_03'
-export ENDPOINT_ID='11908233'
-export CONTAINER_IMAGE='gcr.io/onyx-principle-364411/ner-model-inference:v1'
+export ENDPOINT_ID='11908234'
+export CONTAINER_IMAGE='gcr.io/onyx-principle-364411/ner-model-inference-v2:latest'
 export PROJECT='onyx-principle-364411'
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
 
