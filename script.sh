@@ -10,7 +10,7 @@ export MODEL1_ID='new-testing-1'
 # export MODEL2_ID='MY_Model_03'
 export ENDPOINT_ID='11908231'
 export CONTAINER_IMAGE='gcr.io/test-project-365213/ner-model-inference-v2:latest'
-export PROJECT='onyx-principle-364411'
+export PROJECT='test-project-365213'
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
 
 gcloud ai models upload --region=$REGION \
