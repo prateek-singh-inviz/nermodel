@@ -20,7 +20,8 @@ gcloud ai models upload --region=$REGION \
             --model-id=$MODEL1_ID \
             --container-predict-route=/predict \
             --container-health-route=/live \
-            --container-env-vars=INFERENCE_DEVICE=gpu,TOPK=1    
+            --container-env-vars=INFERENCE_DEVICE=gpu,TOPK=1 \
+            --container-ports=[5000]
           
 
 gcloud ai endpoints create --region=$REGION \
