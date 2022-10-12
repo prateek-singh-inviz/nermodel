@@ -3,12 +3,12 @@ echo $gcp_credential > temp.json
 sudo snap install google-cloud-cli --classic
 export SERVICE_ACCOUNT='nermodelfull@test-project-365213.iam.gserviceaccount.com'
 export REGION='us-central1'
-export ENDPOINT_NAME='ner-testing-v1'
-export MODEL_NAME1='ner-v01-m1'
-export MODEL1_ID='new-testing-1'
+export ENDPOINT_NAME='ner-testing-v0'
+export MODEL_NAME1='ner-v01-m0'
+export MODEL1_ID='new-testing-'
 # export MODEL_NAME2='Model_3'
 # export MODEL2_ID='MY_Model_03'
-export ENDPOINT_ID='11908231'
+export ENDPOINT_ID='11908230'
 export CONTAINER_IMAGE='gcr.io/test-project-365213/ner-model-inference-v2:latest'
 export PROJECT='test-project-365213'
 export GOOGLE_APPLICATION_CREDENTIALS=temp.json
