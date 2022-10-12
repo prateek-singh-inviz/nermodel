@@ -11,6 +11,7 @@ export MODEL1_ID='new-testing-0'
 export ENDPOINT_ID='11908230'
 export CONTAINER_IMAGE='gcr.io/test-project-365213/ner-model-inference-v2:latest'
 export PROJECT='test-project-365213'
+export GOOGLE_APPLICATION_CREDENTIALS=temp.json
 gcloud auth activate-service-account $SERVICE_ACCOUNT --key-file=temp.json --project=$PROJECT
 
 gcloud ai models upload --region=$REGION \
